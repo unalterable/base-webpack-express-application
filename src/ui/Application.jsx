@@ -8,7 +8,11 @@ const Application = ({ text }) => {
       <TopNav />
       <div>
         <p>Hello World!</p>
-        <p onClick={() => console.log('JS working')}>{text}</p>
+        <p onClick={async () => {
+          console.info('JS working');
+          await new Promise(res => setTimeout(res, 2000));
+          console.info('JS working');
+        }}>{text}</p>
       </div>
     </Theme>
   );
