@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
     "chai": "^4.2.0",
     "docker-starter": "^1.0.1",
     "eslint": "^5.11.1",

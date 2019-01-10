@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import Theme from './Theme.jsx';
 import TopNav from './components/TopNav.jsx';
 
