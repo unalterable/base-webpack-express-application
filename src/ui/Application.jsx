@@ -4,6 +4,7 @@ import red from '@material-ui/core/colors/red';
 import Button from '@material-ui/core/Button';
 import Theme from './Theme.jsx';
 import TopNav from './components/TopNav.jsx';
+import AppRouter from './components/AppRouter.jsx';
 
 class Application extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class Application extends React.Component {
             Change Theme
           </Button>
         </div>
+        <AppRouter/>
       </Theme>
     );
   }

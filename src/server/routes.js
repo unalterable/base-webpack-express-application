@@ -13,14 +13,14 @@ const initRoutes = () => {
 
   app.use('/assets', express.static('assets'));
 
-  app.get('/', indexController.showIndex);
-
   app.get('/api/items', itemController.getItems);
   app.put('/api/item/', itemController.createItem);
   app.get('/api/item/:id', itemController.getItemById);
   app.post('/api/item/:id', itemController.updateItemById);
   app.delete('/api/item/:id', itemController.deleteItemById);
 
+  app.get('/*', indexController.showIndex);
+  
   return app;
 };
 
