@@ -1,10 +1,10 @@
 const { raw } = require('config/raw');
-const db = require('../test/helpers/db');
+const mongo = require('../test/helpers/mongo');
 
 module.exports = {
   db: {
     mongo: {
-      url: raw(db.getUrl()),
+      url: raw(mongo.getUrl()),
     },
   },
 };

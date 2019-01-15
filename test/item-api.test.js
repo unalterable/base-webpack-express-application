@@ -2,18 +2,13 @@ require('../babel');
 const axios = require('axios');
 const { expect } = require('chai');
 const _ = require('lodash');
-const { db, server } = require('./helpers');
+const { mongo, server } = require('./helpers');
 
 describe('api', () => {
   let collection;
 
   before(async () => {
-    collection = await db.collectionTools({ db: 'base-app', collection: 'items' });
-    await server.start();
-  });
-
-  after(async () => {
-    await server.stop();
+    collection = await mongo.collectionTools({ db: 'base-app', collection: 'items' });
   });
 
   beforeEach(async () => {

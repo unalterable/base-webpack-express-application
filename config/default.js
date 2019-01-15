@@ -1,4 +1,5 @@
 module.exports = {
+  title: 'Base App',
   db: {
     mongo: {
       dbName: 'base-app',

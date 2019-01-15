@@ -16,6 +16,7 @@ const initServer = () => {
       runningServer = null;
     },
     getDomain: () => `http://localhost:${runningServer.address().port}`,
+    getPort: () => runningServer.address().port,
   };
 };
 

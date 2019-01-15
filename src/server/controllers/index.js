@@ -1,4 +1,5 @@
 import React from 'react';
+import config from 'config';
 import { renderToString } from 'react-dom/server';
 import { SheetsRegistry } from 'jss';
 import JssProvider from 'react-jss/lib/JssProvider';
@@ -7,7 +8,7 @@ import html from '../../ui/layout/basic.js';
 
 module.exports = {
   async showIndex(req, res) {
-    const title = 'Hello World Title';
+    const title = config.get('title');
     const initialState = { text: 'alice' };
     const sheetsRegistry = new SheetsRegistry();
     const body = renderToString(

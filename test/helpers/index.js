@@ -1,7 +1,9 @@
-const db = require('./db');
+const mongo = require('./mongo');
 const server = require('./server');
+const selenium = require('./selenium');
 
 module.exports = {
-  db,
+  mongo,
   server,
+  selenium,
 };
