@@ -25,10 +25,8 @@ const browserHandle = (() => {
     getDomain: () => `http://172.17.0.1:${server.getPort()}`,
     getBrowser: async () => {
       if (!browser) {
-        if (!browser) {
-          const { host, port } = selenium.ensureRunning();
-          browser = await webdriverio.remote(buildWdOpts({ host, port }));
-        }
+        const { host, port } = selenium.ensureRunning();
+        browser = await webdriverio.remote(buildWdOpts({ host, port }));
         await browser.url(handle.getDomain());
       }
       return { browser };
