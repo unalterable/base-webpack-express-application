@@ -9,14 +9,10 @@ const mongo = dockerStarter({
   publishedPort: 27019,
 });
 
-
-const getUrl = (url => async () => {
-  if (!url) {
-    const { host, port } = mongo.ensureRunning();
-    url = `mongodb://${host}:${port}`;
-  }
-  return url;
-})(null);
+const getUrl = () => {
+  const { host, port } = mongo.ensureRunning();
+  return `mongodb://${host}:${port}`;
+};
 
 module.exports = {
   getUrl,

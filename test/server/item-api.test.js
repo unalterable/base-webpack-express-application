@@ -3,7 +3,7 @@ const { expect } = require('chai');
 const _ = require('lodash');
 const { mongo, server } = require('../helpers');
 
-describe('api', () => {
+describe('Server Tests', () => {
   let collection;
 
   before(async () => {

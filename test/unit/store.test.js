@@ -9,7 +9,7 @@ const testDoc = {
   prop2: 'val2',
 };
 
-describe('store', () => {
+describe('Unit Tests', () => {
   let collectionHelper;
   let getConnection;
   let itemsCollection;

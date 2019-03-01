@@ -52,22 +52,22 @@ const Alert = ({ classes, message, variant, open, onClose, vertical = 'top', hor
   const Icon = variantIcon[variant];
   return (
     <Snackbar
-    anchorOrigin={{ vertical, horizontal }}
-    open={open}
-    autoHideDuration={6000}
-    onClose={onClose}
+      anchorOrigin={{ vertical, horizontal }}
+      open={open}
+      autoHideDuration={6000}
+      onClose={onClose}
     >
-    <SnackbarContent
-    className={classes[variant]}
-    message={
-      <span className={classes.message}>
-      <Icon className={classNames(classes.icon, classes.iconVariant)} />
-      <Typography variant="h6" color="inherit">
-      {message}
-      </Typography>
+      <SnackbarContent
+        className={classes[variant]}
+        message={
+          <span className={classes.message}>
+            <Icon className={classNames(classes.icon, classes.iconVariant)} />
+            <Typography variant="h6" color="inherit">
+              {message}
+            </Typography>
           </span>
-    }
-    />
+        }
+      />
     </Snackbar>
   );
 };

@@ -29,7 +29,7 @@ const browserHandle = (() => {
         browser = await webdriverio.remote(buildWdOpts({ host, port }));
         await browser.url(handle.getDomain());
       }
-      return { browser };
+      return browser;
     },
     closeBrowser: async () => {
       await browser.closeWindow();
