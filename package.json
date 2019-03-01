@@ -8,7 +8,7 @@
     "dev": "concurrently -k -p '{time} {name}:' -t 'HH:mm:ss' -n 'Assets,Server' -c 'green,magenta' 'npm run build-assets:watch' 'npm run server:watch'",
     "start-mongo": "docker run --rm -d mongo:latest",
     "stub-data": "node scripts/stub-data.js",
-    "test": "npm run build-assets && mocha test/**/*.test.js --require test/helpers/setup --timeout=60000 --exit",
+    "test": "npm run build-assets && NODE_ENV=test mocha test/**/*.test.js --require test/helpers/setup --timeout=60000 --exit",
     "server": "node src/server/index.js",
     "server:watch": "nodemon -w src/ -e js,jsx src/server/index.js",
     "lint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
