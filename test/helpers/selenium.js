@@ -32,7 +32,7 @@ const browserHandle = (() => {
       return browser;
     },
     closeBrowser: async () => {
-      await browser.closeWindow();
+      await browser.deleteSession();
       browser = null;
     },
     restartBrowser: async () => {
